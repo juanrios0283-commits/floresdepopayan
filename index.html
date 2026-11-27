@@ -237,6 +237,33 @@
     .wa-float:hover { transform: scale(1.08); }
     .wa-float svg { width: 26px; height: 26px; fill: currentColor; }
 
+    /* ── Galería de trabajos reales ── */
+    .gallery-head { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .gallery-head h2 { margin-top: 1.3rem; }
+    .gallery-filters { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2.2rem; }
+    .filter-btn {
+      border: 1px solid var(--line); background: var(--paper); color: var(--rose);
+      padding: .55rem 1rem; border-radius: 999px; cursor: pointer;
+      font-size: .65rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      transition: background .25s ease, color .25s ease, border-color .25s ease;
+    }
+    .filter-btn:hover { border-color: var(--sage); }
+    .filter-btn.active { background: var(--rose); border-color: var(--rose); color: var(--paper); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(.8rem, 1.8vw, 1.4rem); }
+    .gallery-item { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--soft); border: 1px solid var(--line); margin: 0; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item figcaption {
+      position: absolute; inset: auto 0 0; padding: 1.6rem 1rem .9rem;
+      color: var(--paper); font-size: .66rem; font-weight: 600; letter-spacing: .11em; text-transform: uppercase;
+      background: linear-gradient(0deg, rgba(38,23,28,.84) 0%, rgba(38,23,28,0) 100%);
+    }
+    .gallery-item[hidden] { display: none; }
+    .gallery-note { margin-top: 1.6rem; font-size: .82rem; color: var(--rose); }
+    .gallery-note a { border-bottom: 1px solid var(--sage); }
+    @media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } .gallery-item { aspect-ratio: 3/4; } }
+
     /* ── Reveal ── */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
     .reveal.visible { opacity: 1; transform: none; }
@@ -371,6 +398,58 @@
       </div>
     </section>
 
+    <section class="section" id="galeria" style="background: var(--paper);">
+      <div class="container">
+        <div class="gallery-head reveal">
+          <div><span class="eyebrow">Trabajos reales</span><h2>Nuestras flores, en detalles</h2></div>
+          <p class="lead">Una muestra de ramos, arreglos y flores que hemos preparado en Popayán.</p>
+        </div>
+        <div class="gallery-filters reveal" role="group" aria-label="Filtrar galería">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter-btn" data-filter="ramos" aria-pressed="false">Ramos y bouquets</button>
+          <button class="filter-btn" data-filter="arreglos" aria-pressed="false">Arreglos y centros</button>
+          <button class="filter-btn" data-filter="bodas" aria-pressed="false">Bodas</button>
+          <button class="filter-btn" data-filter="condolencias" aria-pressed="false">Condolencias</button>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal" data-category="bodas"><img src="assets/galeria/bodas-01.jpg" alt="Foto real: Ramo de novia de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de novia</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-01.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-02.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-03.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-04.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-05.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-06.jpg" alt="Foto real: Ramo redondo de rosas de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo redondo de rosas</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-07.jpg" alt="Foto real: Ramo redondo de rosas de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo redondo de rosas</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-08.jpg" alt="Foto real: Ramo redondo de rosas de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo redondo de rosas</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-01.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-09.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-10.jpg" alt="Foto real: Ramo redondo de rosas de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo redondo de rosas</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="condolencias"><img src="assets/galeria/condolencias-01.jpg" alt="Foto real: Arreglo de condolencia de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo de condolencia</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-11.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-12.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-13.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-14.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-15.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-16.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-02.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="condolencias"><img src="assets/galeria/condolencias-02.jpg" alt="Foto real: Arreglo de condolencia de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo de condolencia</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-17.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-03.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-18.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="condolencias"><img src="assets/galeria/condolencias-03.jpg" alt="Foto real: Arreglo de condolencia de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo de condolencia</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-04.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-19.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-20.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-21.jpg" alt="Foto real: Ramo redondo de rosas de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo redondo de rosas</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-05.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-06.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-07.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="arreglos"><img src="assets/galeria/arreglos-08.jpg" alt="Foto real: Arreglo en caja de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Arreglo en caja</figcaption></figure>
+          <figure class="gallery-item reveal" data-category="ramos"><img src="assets/galeria/ramos-22.jpg" alt="Foto real: Ramo de mano de Flores de Popayán" loading="lazy" decoding="async"><figcaption>Ramo de mano</figcaption></figure>
+        </div>
+        <p class="gallery-note">¿Te gustó alguno? Escríbenos y lo adaptamos a tu ocasión. <a href="https://wa.me/573216396846?text=Hola%2C%20me%20gust%C3%B3%20un%20arreglo%20de%20la%20galer%C3%ADa" target="_blank" rel="noopener">Cotizar por WhatsApp</a></p>
+      </div>
+    </section>
     <section class="section essence" id="esencia">
       <div class="container essence-grid">
         <div class="essence-media reveal"><img src="assets/taller.jpg" alt="Manos disponiendo un ramo de rosas y follaje verde" loading="lazy" decoding="async"></div>
@@ -485,6 +564,22 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Filtros de la galería de trabajos reales
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b => {
+          const active = b === btn;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-pressed', String(active));
+        });
+        galleryItems.forEach(item => {
+          item.hidden = filter !== 'all' && item.dataset.category !== filter;
+        });
+      });
+    });
   </script>
 </body>
 </html>
