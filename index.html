@@ -5,20 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Flores de Popayán — Floristería artesanal en Popayán, Cauca</title>
   <meta name="description" content="Ramos, arreglos, bodas y arreglos de condolencia hechos a mano en Popayán, Cauca. Flores frescas y diseño a medida.">
-  <meta name="theme-color" content="#f8f6f0">
+  <meta name="theme-color" content="#fbf5f6">
   <link rel="preload" as="image" href="assets/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #f8f6f0;
-      --paper: #fffefb;
-      --ink: #262a22;
-      --olive: #5c6350;
-      --sage: #9ba28c;
-      --line: #e3e0d5;
-      --soft: #f1efe7;
+      --cream: #fbf5f6;
+      --paper: #fffdfc;
+      --ink: #2d2528;
+      --rose: #966d76;
+      --sage: #c8a7ad;
+      --line: #ecdee1;
+      --soft: #f7ebed;
+      --blush: #f3dfe3;
+      --accent: #b97f8b;
       --serif: "Cormorant Garamond", Georgia, serif;
       --sans: "Montserrat", Arial, sans-serif;
     }
@@ -46,13 +48,13 @@
       font-weight: 500;
       letter-spacing: .28em;
       text-transform: uppercase;
-      color: var(--olive);
+      color: var(--rose);
     }
     .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--sage); }
     h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; }
     h2 { font-size: clamp(2.4rem, 5vw, 4.2rem); letter-spacing: -.02em; }
     h3 { font-size: clamp(1.6rem, 2.5vw, 2.1rem); }
-    .lead { max-width: 46ch; color: var(--olive); font-size: 1rem; }
+    .lead { max-width: 46ch; color: var(--rose); font-size: 1rem; }
     .center { text-align: center; margin-inline: auto; }
     .center .eyebrow::before { display: none; }
 
@@ -72,7 +74,7 @@
     }
     .btn:hover { transform: translateY(-2px); }
     .btn-dark { background: var(--ink); color: var(--paper); }
-    .btn-dark:hover { background: var(--olive); border-color: var(--olive); }
+    .btn-dark:hover { background: var(--rose); border-color: var(--rose); }
     .btn-light { background: var(--paper); color: var(--ink); border-color: var(--paper); }
     .btn-light:hover { background: transparent; color: var(--paper); }
     .btn-outline:hover { background: var(--ink); color: var(--paper); }
@@ -86,7 +88,7 @@
       transition: background .4s ease, box-shadow .4s ease, padding .4s ease;
     }
     .site-header.scrolled {
-      background: rgba(248, 246, 240, .94);
+      background: rgba(251, 245, 246, .94);
       backdrop-filter: blur(12px);
       box-shadow: 0 1px 0 var(--line);
       padding: .7rem 0;
@@ -117,7 +119,7 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background: linear-gradient(90deg, rgba(24,27,21,.66) 0%, rgba(24,27,21,.4) 46%, rgba(24,27,21,.08) 100%);
+      background: linear-gradient(90deg, rgba(46,29,35,.66) 0%, rgba(46,29,35,.4) 46%, rgba(46,29,35,.08) 100%);
     }
     .hero-content { color: var(--paper); padding: 9rem 0 6rem; max-width: 700px; }
     .hero .eyebrow { color: rgba(255,255,255,.85); }
@@ -139,7 +141,7 @@
     .intro-grid h2 { margin-top: 1.5rem; }
     .intro-copy { padding-top: 2.5rem; }
     .intro-copy p + p { margin-top: 1.2rem; }
-    .intro-copy p { color: var(--olive); max-width: 60ch; }
+    .intro-copy p { color: var(--rose); max-width: 60ch; }
     .signature { margin-top: 2.5rem; font-family: var(--serif); font-style: italic; font-size: 1.6rem; color: var(--ink); }
 
     /* ── Colección ── */
@@ -151,7 +153,7 @@
     .card.tall { min-height: 580px; }
     .card img { position: absolute; inset: 0; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
     .card:hover img { transform: scale(1.05); }
-    .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(20,22,17,.78) 0%, rgba(20,22,17,.12) 55%, rgba(20,22,17,0) 100%); }
+    .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(38,23,28,.78) 0%, rgba(38,23,28,.12) 55%, rgba(38,23,28,0) 100%); }
     .card-body { position: relative; z-index: 1; padding: clamp(1.6rem, 3vw, 2.6rem); color: var(--paper); }
     .card-number { font-family: var(--serif); font-size: .95rem; opacity: .75; letter-spacing: .1em; }
     .card h3 { margin: .5rem 0 .6rem; }
@@ -169,51 +171,51 @@
       content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 1px solid var(--sage); z-index: -1;
     }
     .essence-copy h2 { margin: 1.5rem 0 1.5rem; }
-    .essence-copy > p { color: var(--olive); max-width: 52ch; }
+    .essence-copy > p { color: var(--rose); max-width: 52ch; }
     .values { margin-top: 2.5rem; border-top: 1px solid var(--line); }
     .value { display: flex; gap: 1.3rem; padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
     .value-num { font-family: var(--serif); font-size: 1.3rem; color: var(--sage); min-width: 2rem; }
     .value strong { display: block; font-size: .85rem; font-weight: 600; letter-spacing: .05em; }
-    .value small { color: var(--olive); font-size: .82rem; }
+    .value small { color: var(--rose); font-size: .82rem; }
 
     /* ── Proceso ── */
     .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
     .step { text-align: center; padding: 2.2rem 1.5rem; border: 1px solid var(--line); background: var(--paper); }
-    .step-icon { width: 48px; height: 48px; margin: 0 auto 1.2rem; border: 1px solid var(--sage); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.3rem; color: var(--olive); }
+    .step-icon { width: 48px; height: 48px; margin: 0 auto 1.2rem; border: 1px solid var(--sage); border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 1.3rem; color: var(--rose); }
     .step h3 { font-size: 1.5rem; margin-bottom: .5rem; }
-    .step p { font-size: .85rem; color: var(--olive); }
+    .step p { font-size: .85rem; color: var(--rose); }
 
     /* ── Quote ── */
-    .quote { background: var(--olive); color: var(--paper); text-align: center; padding: clamp(4rem, 8vw, 6.5rem) 0; }
+    .quote { background: linear-gradient(135deg, #a1737e 0%, #875965 100%); color: var(--paper); text-align: center; padding: clamp(4rem, 8vw, 6.5rem) 0; }
     .quote blockquote { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 3.2rem); font-style: italic; max-width: 20ch; margin: 0 auto; line-height: 1.25; }
-    .quote .eyebrow { color: rgba(255,255,255,.75); margin-bottom: 1.5rem; }
+    .quote .eyebrow { color: rgba(255,255,255,.88); margin-bottom: 1.5rem; }
     .quote .eyebrow::before { display: none; }
 
     /* ── Contacto ── */
     .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
     .contact-copy h2 { margin: 1.5rem 0 1.2rem; }
-    .contact-copy > p { color: var(--olive); max-width: 48ch; }
+    .contact-copy > p { color: var(--rose); max-width: 48ch; }
     .contact-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.4rem; }
     .contact-details { margin-top: 3rem; border-top: 1px solid var(--line); }
     .detail { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
-    .detail svg { width: 18px; height: 18px; color: var(--olive); flex: none; }
+    .detail svg { width: 18px; height: 18px; color: var(--rose); flex: none; }
     .detail div { display: flex; flex-direction: column; }
     .detail small { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--sage); }
     .detail span, .detail a { font-size: .9rem; }
-    .detail a:hover { color: var(--olive); }
+    .detail a:hover { color: var(--rose); }
     .contact-card { background: var(--paper); border: 1px solid var(--line); padding: clamp(1.8rem, 4vw, 3rem); }
     .contact-card h3 { font-size: 2rem; margin-bottom: 1rem; }
-    .contact-card > p { font-size: .88rem; color: var(--olive); margin-bottom: 2rem; }
+    .contact-card > p { font-size: .88rem; color: var(--rose); margin-bottom: 2rem; }
     .map {
       width: 100%; aspect-ratio: 4/3; border: 1px solid var(--line);
       background:
-        linear-gradient(rgba(91,99,80,.08) 1px, transparent 1px) 0 0 / 34px 34px,
-        linear-gradient(90deg, rgba(91,99,80,.08) 1px, transparent 1px) 0 0 / 34px 34px,
+        linear-gradient(rgba(150,109,118,.14) 1px, transparent 1px) 0 0 / 34px 34px,
+        linear-gradient(90deg, rgba(150,109,118,.14) 1px, transparent 1px) 0 0 / 34px 34px,
         var(--soft);
       display: grid; place-items: center; text-align: center; padding: 1.5rem;
     }
-    .map-pin { font-family: var(--serif); font-size: 1.8rem; color: var(--olive); }
-    .map small { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--olive); margin-top: .4rem; }
+    .map-pin { font-family: var(--serif); font-size: 1.8rem; color: var(--rose); }
+    .map small { display: block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--rose); margin-top: .4rem; }
 
     /* ── Footer ── */
     .site-footer { background: var(--ink); color: var(--paper); padding: 3rem 0 2rem; }
@@ -252,7 +254,7 @@
       .essence-media { max-width: 520px; }
       .steps { grid-template-columns: 1fr; }
       .collection-head { flex-direction: column; align-items: flex-start; }
-      .hero::after { background: linear-gradient(90deg, rgba(24,27,21,.72), rgba(24,27,21,.3)); }
+      .hero::after { background: linear-gradient(90deg, rgba(46,29,35,.72), rgba(46,29,35,.3)); }
     }
     @media (max-width: 600px) {
       .cards { grid-template-columns: 1fr; }
@@ -322,7 +324,7 @@
       </div>
     </section>
 
-    <section class="section" id="coleccion" style="background: var(--paper);">
+    <section class="section" id="coleccion" style="background: var(--blush);">
       <div class="container">
         <div class="collection-head reveal">
           <div><span class="eyebrow">Nuestro catálogo</span><h2>Colección</h2></div>
